@@ -5,8 +5,8 @@
 //  Created by Ilya Petrosyan on 25.04.2022.
 //
 
-#import <Foundation/Foundation.h>
+#import <React/RCTBridgeModule.h>
 
-@interface RNCalculator : NSObject
+@interface RNCalculator : NSObject <RCTBridgeModule>
 
 @end
