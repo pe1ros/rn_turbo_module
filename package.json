@@ -1,0 +1,31 @@
+{
+  "name": "react-native-turbomodule",
+  "version": "0.0.1",
+  "description": "Showcase Turbomodule with backward compatibility",
+  "react-native": "src/index",
+  "source": "src/index",
+  "files": [
+      "src",
+      "android",
+      "ios",
+      "react-native-turbomodule.podspec",
+      "!android/build",
+      "!ios/build",
+      "!**/__tests__",
+      "!**/__fixtures__",
+      "!**/__mocks__"
+  ],
+  "keywords": ["react-native", "ios", "android"],
+  "repository": "https://github.com/pe1ros/rn_turbomodule.git",
+  "author": "Ilya Petrosyan <im.clean@yandex.ru> (https://github.com/pe1ros)",
+  "license": "MIT",
+  "bugs": {
+      "url": "https://github.com/pe1ros/rn_turbomodule/issues"
+  },
+  "homepage": "https://github.com/pe1ros/rn_turbomodule#readme",
+  "devDependencies": {},
+  "peerDependencies": {
+      "react": "*",
+      "react-native": "*"
+  }
+}
