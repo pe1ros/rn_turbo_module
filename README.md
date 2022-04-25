@@ -54,3 +54,19 @@ Autolinking doesn’t work with the new architecture out of the box. Therefore y
             return rncore_ModuleProvider(moduleName, params);
         }
         ```
+
+#### Enable TurboModules
+
+### Android 
+gradle.properties => newArchEnabled=true
+
+### iOS
+
+```obj-c
+    @implementation AppDelegate
+
+    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+    {
+        RCTEnableTurboModule(YES); // add this line
+    ////
+```
