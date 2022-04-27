@@ -21,6 +21,8 @@ public class CalculatorPackage extends TurboReactPackage {
     public NativeModule getModule(String name, ReactApplicationContext reactContext) {
         if (name.equals(CalculatorModuleImpl.NAME)) {
             return new CalculatorModule(reactContext);
+        } else if (name.equals(StringBuilderModuleImpl.NAME)) {
+            return new StringBuilderModule(reactContext);
         } else {
             return null;
         }
@@ -36,6 +38,17 @@ public class CalculatorPackage extends TurboReactPackage {
                     new ReactModuleInfo(
                             CalculatorModuleImpl.NAME,
                             CalculatorModuleImpl.NAME,
+                            false, // canOverrideExistingModule
+                            false, // needsEagerInit
+                            true, // hasConstants
+                            false, // isCxxModule
+                            isTurboModule // isTurboModule
+            ));
+            moduleInfos.put(
+                    StringBuilderModuleImpl.NAME,
+                    new ReactModuleInfo(
+                            StringBuilderModuleImpl.NAME,
+                            StringBuilderModuleImpl.NAME,
                             false, // canOverrideExistingModule
                             false, // needsEagerInit
                             true, // hasConstants
