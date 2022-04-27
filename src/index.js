@@ -4,7 +4,11 @@ import { NativeModules } from 'react-native'
 const isTurboModuleEnabled = global.__turboModuleProxy != null;
 
 const calculator = isTurboModuleEnabled ?
-require("./NativeCalculator").default :
-NativeModules.Calculator;
+  require("./NativeCalculator").default :
+  NativeModules.Calculator;
 
-export default calculator;
+const stringBuilder = isTurboModuleEnabled ?
+  require("./NativeStringBuilder").default :
+  NativeModules.StringBuilder;
+
+export {calculator, stringBuilder};

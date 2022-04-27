@@ -16,13 +16,13 @@
       "!**/__mocks__"
   ],
   "keywords": ["react-native", "ios", "android"],
-  "repository": "https://github.com/pe1ros/rn_turbomodule.git",
+  "repository": "https://github.com/pe1ros/rn_turbo_module.git",
   "author": "Ilya Petrosyan <im.clean@yandex.ru> (https://github.com/pe1ros)",
   "license": "MIT",
   "bugs": {
-      "url": "https://github.com/pe1ros/rn_turbomodule/issues"
+      "url": "https://github.com/pe1ros/rn_turbo_module/issues"
   },
-  "homepage": "https://github.com/pe1ros/rn_turbomodule#readme",
+  "homepage": "https://github.com/pe1ros/rn_turbo_module#readme",
   "devDependencies": {},
   "peerDependencies": {
       "react": "*",
@@ -30,11 +30,11 @@
   },
   "codegenConfig": {
       "libraries": [
-          {
-          "name": "RNCalculatorSpec",
+        {
+          "name": "RNSpec",
           "type": "modules",
           "jsSrcsDir": "src"
-          }
+        }
       ]
   }
 }
