@@ -1,6 +1,6 @@
 # For integration turbomodules on Android platform, we need to do these steps:
 
-### 1) In build.gradle file on module level add these lines:
+### 1) In `build.gradle` file on module level add these lines:
 
 ```
 
@@ -46,7 +46,7 @@ if (isNewArchitectureEnabled()) {
 }
 ```
 
-### 2) Change your TurboModulePackage.java like this, source android/src/main/java/com/turbomodule/TurboModulePackage.java
+### 2) Change your `TurboModulePackage.java` like this, source `android/src/main/java/com/turbomodule/TurboModulePackage.java`
 
 ```java
 package com.turbomodule;
@@ -98,7 +98,7 @@ public class TurboModulePackage extends TurboReactPackage {
 }
 ```
 
-### 3) Create your TurboModuleImpl.java file, in  android/src/main/java/com/turbomodule/TurboModuleImpl.java directory. This class will be contain main your module logic.
+### 3) Create your `TurboModuleImpl.java` file, in  `android/src/main/java/com/turbomodule/TurboModuleImpl.java` directory. This class will be contain main your module logic.
 
 ```java
 public class TurboModuleImpl {
@@ -110,7 +110,7 @@ public class TurboModuleImpl {
 }
 ```
 
-### 4) Create directory and file inside there android/src/newarch/java/com/turbomodule/TurboModule.java
+### 4) Create directory and file inside there `android/src/newarch/java/com/turbomodule/TurboModule.java`
 
 ```java
 package com.turbomodule;
@@ -145,7 +145,7 @@ public class TurboModule extends NativeTurboModuleSpec {
 }
 ```
 
-### 5) Create directory and file inside there android/src/oldarch/java/com/turbomodule/TurboModule.java
+### 5) Create directory and file inside there `android/src/oldarch/java/com/turbomodule/TurboModule.java`
 
 ```java
 package com.turbomodule;
@@ -179,7 +179,7 @@ public class TurboModule extends ReactContextBaseJavaModule {
 
 # For integration turbomodules on iOS platform, we need to do these steps:
 
-### 1) Add codegen config in the end your package.json file
+### 1) Add codegen config in the end your `package.json` file
 
 ```json
 "codegenConfig": {
@@ -219,9 +219,9 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 
   end
 ```
 
-### 3) Change extension your file RNTurboModule.m to RNTurboModule.mm
+### 3) Change extension your file `RNTurboModule.m` to `RNTurboModule.mm`
 
-### 4) Update your RNTurboModule.mm file
+### 4) Update your `RNTurboModule.mm` file
 
 ```obj-c
 #import "RNTurboModule.h"
@@ -259,7 +259,7 @@ RCT_REMAP_METHOD(add, addA:(NSInteger)a
 
 # Create TS Spec file and update index.ts for using with new/old architecture
 
-### 1) Update your index.ts file
+### 1) Update your `index.ts` file
 
 ```js
 import { NativeModules } from 'react-native';
@@ -271,7 +271,7 @@ const TurboModule = isTurboModuleEnabled
   : NativeModules.RNTurboModule;
 ```
 
-### 2) Create NativeTurboModule.ts file with content like this
+### 2) Create `NativeTurboModule.ts` file with content like this
 
 ```ts
 import type { TurboModule } from 'react-native';
@@ -309,7 +309,7 @@ export default TurboModuleRegistry.get<Spec>('RNTurboModule');
 # Enable your Android application for support turbomodules
 ### 1) Install React Native >= 0.68.0, or keep doing steps from official [docs](https://reactnative.dev/docs/new-architecture-app-intro) if you have below version.
 
-### 2) Move to example-library/android/gradle.properties file and change `newArchEnabled` flag
+### 2) Move to `example-library/android/gradle.properties` file and change `newArchEnabled` flag
 
   newArchEnabled=true
 
